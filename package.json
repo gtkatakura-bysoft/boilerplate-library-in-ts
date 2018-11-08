@@ -14,7 +14,7 @@
     "typescript": "^3.1.6"
   },
   "scripts": {
-    "build": "npm-run-all build:*",
+    "build": "run-p build:*",
     "build:esm": "babel --extensions '.ts' --delete-dir-on-start --env-name esm -d esm src",
     "build:cjs": "babel --extensions '.ts' --delete-dir-on-start --env-name cjs -d cjs src",
     "build:types": "tsc --declaration src/index.ts --declarationDir types --noEmit",
